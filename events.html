@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css"
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <div class="topper">
+      <h1>Events</h1>
+    </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="340342896858-3enrafamiv092269vmnm5i1ltq2a8ejb.apps.googleusercontent.com">
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <nav class="navi">
+      <a href="homepage.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a class="active" href="events.html">Events</a>
+      <a href="resources.html">Resources</a>
+      <a href="memes.html">Memes</a>
+      <a href="causes.html">Causes</a>
+      <a href="senators.html">Senators</a>
+    </nav>
+  </header>
+  
+  <div class="main">
+    <table class="table table-bordered table-hover" id="tabEv">
+      <thread>
+        <tr>
+          <th>Event</th>
+          <th>Time</th>
+          <th>Place</th>
+          <th>Causes</th>
+         </tr>
+      </thread>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="addEvent" id="addEvent">
+    <p class="h3">Add an Event!<p>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 col-xs-3">Event Name</label>
+        <input type="text" class="col-sm-8" placeholder="Event Name" id="EvName">
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 col-xs-3">Time</label>
+        <input type="text" class="col-sm-8" placeholder="Date/Time" id="EvTime">
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 col-xs-3">Location</label>
+        <input type="text" class="col-sm-8" placeholder="Place/Address" id="EvLoc">
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 col-xs-3">Causes</label>
+        <div class="col-xs-8 col-md-8" id="choices">
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="0" value="BLM"> Black Lives Matter
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="1" value="LGBT"> LGBTQ+
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="2" value="FEM"> Women's Rights
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="3" value="IMM"> Immigration Rights
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="4" value="DIS"> Disability Rights
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="5" value="EDU"> Education System
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="6" value="ENV"> Environmental Issues
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="7" value="GUN"> Gun Rights
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="8" value="PRI"> Prison Systems
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="9" value="PROC"> Pro-Choice
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="10" value="PROL"> Pro-Life
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="11" value="HEALTH"> Healthcare
+          </label>
+          <label class="checkbox-inline col-xs-4 col-sm-3">
+            <input type="checkbox" id="12" value="FDT"> Anti-Trump
+          </label>
+        </div>
+      </div>
+      <button type="button" class="addev" onclick="addEvent()">Submit</button>
+      <button type="button" class="addev" onclick="clearLS()">Clear</button>
+    </form>
+  </div>
+ <!-- <div id="LeftNavContainer" class="relative">
+
+					<div id="LeftNavCategoryContainer" class=" hidden-counts">
+	<div id="e1-6" class="cat rlp uvcc" _sp="p2045573.m1685">
+		<input type="hidden" id="domCatId" value="" data-autoappliedcat="false">
+		<div class="rlp-h"><b class="srpArwExpandCollapse2 rlp-i">
+	<div class="cat-link"> 
+	
+					<a aria-label="Show more categories" href="#" class="cat-sh remainingcats" onclick="return false;"><span class="cat-more">Show more</span><span class="icon"></span></a>
+
+<div id="e1-15" class="asp asp-left-nav" _sp="p2045573.m1684">
+				<div id="e1-16" class="pnl">
+	<div class="pnl-h">
+		<span class="pnl-h" data-return="false" data-aspecttitle="ideology" id="ideology"><h3>Ideology</h3></span>
+	 	</div>
+	<div class="pnl-b pad-bottom">
+		<div id="e1-17" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;Brand=Case">
+							<input role="presentation" aria-label="Conservative" tabindex="-1" type="checkbox" name="ideology" id="e1-18" class="cbx" aria-hidden="true">
+							<span class="cbx">Conservative</span>
+								</a>						
+					</div>
+				<div id="e1-19" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;Brand=Handmade">
+							<input role="presentation" aria-label="Independent" tabindex="-1" type="checkbox" name="ideology" id="e1-20" class="cbx" aria-hidden="true">
+							<span class="cbx">Independent</span>
+								</a>						
+					</div>
+				<div id="e1-21" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;Brand=Pottery%2520Barn">
+							<input role="presentation" aria-label="Liberal" tabindex="-1" type="checkbox" name="ideology" id="e1-22" class="cbx" aria-hidden="true">
+							<span class="cbx">Liberal</span>
+								</a>						
+					</div>
+				<div id="e1-23" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;Brand=Scala">
+							<input role="presentation" aria-label="Undefined" tabindex="-1" type="checkbox" name="ideology" id="e1-24" class="cbx" aria-hidden="true">
+							<span class="cbx">Undefined</span>
+								</a>						
+					</div>
+				</div>
+	</div>
+<div id="e1-27" class="pnl">
+	<div class="pnl-h">
+		<span class="pnl-h" data-return="false" data-aspecttitle="cause" id="LH_ItemCondition"><h3>Cause</h3></span>
+	 	<span class="seeall"><button class="seeall" aria-haspopup="true" aria-label="Causes search refinements dialog">see all<span class="hdn"> Causes</span></button></span></div>
+	<div class="pnl-b pad-bottom">
+		<div id="e1-28" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;rt=nc&amp;LH_ItemCondition=3">
+							<input role="presentation" aria-label="New" tabindex="-1" type="checkbox" name="LH_ItemCondition" id="e1-29" class="cbx" aria-hidden="true">
+							<span class="cbx">New</span>
+								</a>						
+					</div>
+				<div id="e1-30" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;rt=nc&amp;LH_ItemCondition=4">
+							<input role="presentation" aria-label="Used" tabindex="-1" type="checkbox" name="LH_ItemCondition" id="e1-31" class="cbx" aria-hidden="true">
+							<span class="cbx">Used</span>
+									<span class="cnt">(62,286)</span>
+								</a>						
+					</div>
+				<div id="e1-32" class="cbx">
+						<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;_dcat=11700&amp;rt=nc&amp;LH_ItemCondition=10">
+							<input role="presentation" aria-label="Not Specified" tabindex="-1" type="checkbox" name="LH_ItemCondition" id="e1-33" class="cbx" aria-hidden="true">
+							<span class="cbx">Not Specified</span>
+									<span class="cnt">(19,797)</span>
+								</a>						
+					</div>
+				</div>
+	</div>
+<div class="rlp">
+<br><div id="e1-35" class="pnl">
+	<div class="pnl-h">
+		<span class="pnl-h" data-return="false" data-aspecttitle="Format" id="LH_BuyingFormats"><h3>Format</h3></span>
+		<span class="seeall"><button class="seeall" aria-haspopup="true" aria-label="Format search refinements dialog">see all<span class="hdn">Format</span></button></span></div>
+	<div class="pnl-b pad-bottom">
+		<div id="e1-37" class="rbx">
+								<a class="rbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc" title="All Listings">
+									<input value="LH_AllListings" aria-label="LH_AllListings" tabindex="-1" type="radio" name="LH_BuyingFormats" id="e1-36" class="rbx" checked="" aria-hidden="true">
+									<span class="rbx">All Listings<span class="acc-offscreen">(filter applied)</span></span>
+									<span class="cnt">(2,075,663)</span></a>
+							</div>
+						<div id="e1-39" class="rbx">
+								<a class="rbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_Auction=1" title="Auction">
+									<input value="LH_Auction" aria-label="LH_Auction" tabindex="-1" type="radio" name="LH_BuyingFormats" id="e1-38" class="rbx" aria-hidden="true">
+									<span class="rbx">Auction</span>
+									<span class="cnt">(17,319)</span></a>
+							</div>
+						<div id="e1-41" class="rbx">
+								<a class="rbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_BIN=1" title="Buy It Now">
+									<input value="LH_BIN" aria-label="LH_BIN" tabindex="-1" type="radio" name="LH_BuyingFormats" id="e1-40" class="rbx" aria-hidden="true">
+									<span class="rbx">Buy It Now</span>
+									<span class="cnt">(2,061,085)</span></a>
+							</div>
+						</div>
+	</div><div id="e1-42" class="pnl loc">
+	<div class="pnl-h">
+		<span class="pnl-h" data-return="false" data-aspecttitle="Locations" id="LH_PrefLoc"><h3>Location</h3></span>
+		</div>
+	<div class="pnl-b pad-bottom">
+		<div id="e1-43" class="rbx">
+					<a class="rbx " href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_PrefLoc=98">
+						<input role="presentation" aria-label="Default" tabindex="-1" type="radio" name="LH_PrefLoc" id="e1-44" aria-hidden="true" class="rbx 
+							
+						" checked="">
+						
+						<span class="rbx"><b>Anywhere</b></span>
+							</a>
+					
+					</div>
+				
+			<div id="e1-45" class="rbx">
+					<a class="rbx nearme" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;_sadis=100&amp;_fspt=1&amp;_stpos=80219&amp;LH_PrefLoc=99">
+						<input role="presentation" aria-label="Within" tabindex="-1" type="radio" name="LH_PrefLoc" id="e1-46" aria-hidden="true" class="rbx 
+							submit-disabled
+						">
+						
+						<span class="rbx">Within</span>
+							</a>
+					
+					<div id="nmex" nearmeid="99">	
+						<label class="g-hdn" for="_sadis">Within</label>
+						<select name="_sadis" id="_sadis"><option value="2">2 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="15">15 miles</option><option value="25">25 miles</option><option value="50">50 miles</option><option value="75">75 miles</option><option value="100" selected="selected">100 miles</option><option value="150">150 miles</option><option value="200">200 miles</option><option value="500">500 miles</option><option value="750">750 miles</option><option value="1000">1000 miles</option><option value="1500">1500 miles</option><option value="2000">2000 miles</option></select> of <label class="g-hdn" for="e1-47">Enter your ZIP code</label><input type="text" size="6" maxlength="13" name="_stpos" id="e1-47" data-placeholder="Zip code" value="80219">&nbsp;
+						<label for="" class="g-hdn">Go</label><input id="e1-48" title="Go" class="sprBtnSRP1 submit disabled" type="button">
+						<input type="hidden" name="_cid" value="1">
+						<div class="ziperr g-hdn">Please enter a valid zipcode</div>
+					</div>
+				
+				</div>
+				
+			<div id="e1-49" class="rbx">
+					<a class="rbx " href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_PrefLoc=1">
+						<input role="presentation" aria-label="US Only" tabindex="-1" type="radio" name="LH_PrefLoc" id="e1-50" aria-hidden="true" class="rbx 
+							
+						">
+						
+						<span class="rbx">US Only</span>
+							</a>
+					
+					</div>
+				
+			<div id="e1-51" class="rbx">
+					<a class="rbx " href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_PrefLoc=3">
+						<input role="presentation" aria-label="North America" tabindex="-1" type="radio" name="LH_PrefLoc" id="e1-52" aria-hidden="true" class="rbx 
+							
+						">
+						
+						<span class="rbx">North America</span>
+							</a>
+					
+					</div>
+				
+			<div id="e1-53" class="rbx">
+					<a class="rbx " href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_PrefLoc=2">
+						<input role="presentation" aria-label="Worldwide" tabindex="-1" type="radio" name="LH_PrefLoc" id="e1-54" aria-hidden="true" class="rbx 
+							
+						">
+						
+						<span class="rbx">Worldwide</span>
+							</a>
+					
+					</div>
+				
+			</div>
+	</div>
+<div id="e1-55" class="pnl" style="display:none">
+	<div class="pnl-h">
+		<span class="seeall"><button class="seeall" aria-haspopup="true" aria-label="Seller search refinements dialog">see all<span class="hdn">Seller</span></button></span><span class="pnl-h" data-return="false" data-aspecttitle="Seller" id="LH_FromSellers"><h3>Seller</h3></span>
+	</div>
+	<div class="pnl-b pad-bottom" style="display:none">
+	</div>
+	</div><div id="e1-56" class="pnl">
+						</div>
+	</div><div id="e1-61" class="pnl">
+	<div class="pnl-h">
+		<span class="pnl-h" data-return="false" data-aspecttitle="Show only" id="LH_ShowOnly"><h3>Show only</h3></span>
+		<span class="seeall"><button class="seeall" aria-haspopup="true" aria-label="Show only search refinements dialog">see all <span class="hdn">Show only</span></button></span></div>
+	<div class="pnl-b pad-bottom">
+		<div id="e1-63" class="cbx">
+								<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;rt=nc&amp;LH_RPA=1">
+									<input tabindex="-1" aria-label="LH_RPA" type="checkbox" name="LH_ShowOnly" id="e1-62" class="cbx" aria-hidden="true">
+									<span class="cbx">Returns accepted</span>
+								</a>
+							</div>
+						<div id="e1-65" class="cbx">
+								<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;LH_Complete=1&amp;rt=nc">
+									<input tabindex="-1" aria-label="LH_Complete" type="checkbox" name="LH_ShowOnly" id="e1-64" class="cbx" aria-hidden="true">
+									<span class="cbx">Completed listings</span>
+								</a>
+							</div>
+						<div id="e1-67" class="cbx">
+								<a class="cbx" href="https://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=pillows&amp;LH_Complete=1&amp;LH_Sold=1&amp;rt=nc">
+									<input tabindex="-1" aria-label="LH_Sold" type="checkbox" name="LH_ShowOnly" id="e1-66" class="cbx" aria-hidden="true">
+									<span class="cbx">Sold listings</span>
+								</a>
+							</div>
+						</div>
+	</div></div>
+		
+			<div class="asp">
+				<div class="refine"><a aria-haspopup="true" id="Refine" href="javascript:;">More refinements...</a></div>
+			</div>
+		-->
+		</div>
+
+  <footer>
+  </footer>
+  <script src="addEvent.js"></script>
+</body>
